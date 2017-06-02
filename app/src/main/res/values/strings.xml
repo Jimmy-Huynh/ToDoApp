@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SimpleApp</string>
+    <string-array name="status">
+        <item></item>
+        <item>TO-DO</item>
+        <item>DONE</item>
+    </string-array>
+    <string-array name="priority">
+        <item></item>
+        <item>HIGH</item>
+        <item>MEDIUM</item>
+        <item>SLOW</item>
+    </string-array>
+</resources>

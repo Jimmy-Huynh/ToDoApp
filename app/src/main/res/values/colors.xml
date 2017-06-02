@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#74ad14</color>
+    <color name="colorPrimaryOpacity">#CC639310</color>
+    <color name="colorPrimaryDark">#639310</color>
+    <color name="colorAccent">#639310</color>
+    <color name="colorPrimaryLight">#a6d15e</color>
+    <color name="bg_line_input_login">#E5DDCB</color>
+    <color name="main_black">#393f42</color>
+    <color name="main_black_press">#4b5256</color>
+    <color name="main_black_disable">#b7b7b7</color>
+    <color name="main_blue">#0099cc</color>
+    <color name="press_button">#cae29c</color>
+    <color name="bg_facebook">#3B579D</color>
+    <color name="TransparentGrey">#7F000000</color>
+    <color name="main_text_color">#000000</color>
+    <color name="main_bg">#ffffff</color>
+    <color name="main_positive_color">#00acd9</color>
+    <color name="red_backgroud">#ff0000</color>
+    <color name="light_grey_backgroud">#ccd3d3d3</color>
+    <color name="main_text_color_2">#2a2b27</color>
+    <color name="main_bg_2">#f1f1f1</color>
+    <color name="main_negative_color">#dc5a9b</color>
+    <color name="main_text_color_3">#666666</color>
+    <color name="text_color_setting_summary">#A5A5A5</color>
+
+    <color name="bg_heavy_red_normal">#C55A11</color>
+    <color name="bg_heavy_red_press">#c4713a</color>
+    <color name="bg_grey">#f2f2f2</color>
+    <color name="bg_green_button_press">#84af3a</color>
+    <color name="indicator_container">#6e9d24</color>
+    <color name="indicator_main">#A2C537</color>
+    <color name="bg_portfolio_progress_brown">#E69A29</color>
+    <color name="bg_portfolio_progress_yellow">#F2E30D</color>
+
+    <color name="graph_grey_color">#B9B9B9</color>
+    <color name="cast_intro_overlay_background_color">#CC000000</color>
+    <color name="link_forgot_password_in_change_mail">#0094CA</color>
+    <color name="overlay_dialog">#AA000000</color>
+    <color name="light_light_gray">#e0e0e0</color>
+
+
+    <color name="line_grey_color">#F0F0F0</color>
+    <string-array name="colors">
+        <item>#04bdec</item>
+        <item>#f1e200</item>
+        <item>#e69926</item>
+        <item>#66b11f</item>
+        <item>#cc5233</item>
+        <item>#227ecc</item>
+        <item>#bc8339</item>
+        <item>#457512</item>
+        <item>#aa2727</item>
+        <item>#afafaf</item>
+    </string-array>
+
+    <drawable name="transparent_background">#ffffffff</drawable>
+    <color name="white">#ffffff</color>
+    <color name="red">#FF0000</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="orange">#FFA500</color>
+    <color name="brown">#A52A2A</color>
+    <color name="grey">#C0C0C0</color>
+    <color name="blue">#0000FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_opacity_40">#CCffffff</color>
+    <color name="white_opacity_30">#33FFFFFF</color>
+
+    <color name="gender_press">#E82426</color>
+</resources>
