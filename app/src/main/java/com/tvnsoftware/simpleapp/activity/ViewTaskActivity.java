@@ -29,7 +29,7 @@ public class ViewTaskActivity extends AppCompatActivity {
         mBtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                transferToEdit();
             }
         });
         mBtnDelete = (Button) findViewById(R.id.btn_delete);
@@ -48,11 +48,20 @@ public class ViewTaskActivity extends AppCompatActivity {
 
         mTask = (Task) getIntent().getSerializableExtra(AppContants.OBJECT_TASK);
         if (null != mTask) {
-            mTvName.setText(mTask.getName());
-            mTvNote.setText(mTask.getNote());
-            mTvPriority.setText(mTask.getPriority());
-            mTvStatus.setText(mTask.getStatus());
+            setValue();
         }
+        findViewById(R.id.btn_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });
+        findViewById(R.id.img_home_logo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back();
+            }
+        });
     }
 
     private void confirm() {
@@ -74,6 +83,48 @@ public class ViewTaskActivity extends AppCompatActivity {
         } catch (java.sql.SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private void transferToEdit() {
+        Intent intent = new Intent(this, CreateAndEditActivity.class);
+        intent.putExtra(AppContants.OBJECT_TASK, mTask);
+        startActivityForResult(intent, AppContants.RESULT_1);
+    }
+
+    private void setValue() {
+        mTvName.setText(mTask.getName());
+        mTvDueDate.setText(mTask.getDueDate());
+        mTvNote.setText(mTask.getNote());
+        mTvPriority.setText(mTask.getPriority());
+        mTvStatus.setText(mTask.getStatus());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // check that it is the SecondActivity with an OK result
+        if (requestCode == AppContants.RESULT_1) {
+            if (resultCode == RESULT_OK) {
+                mTask = (Task) data.getSerializableExtra(AppContants.OBJECT_TASK_BACK);
+                if (null != mTask) {
+                    setValue();
+                }
+            }
+        }
+    }
+
+    //Override back button on device
+    @Override
+    public void onBackPressed() {
+        back();
+    }
+
+    //Event for back
+    private void back() {
+        Intent intent = new Intent();
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
 }

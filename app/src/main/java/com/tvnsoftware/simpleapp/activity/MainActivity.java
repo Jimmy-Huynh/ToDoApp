@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mTasksAdapter.getContext(),
                 mLayoutManager.getOrientation());
+        dividerItemDecoration.setDrawable(mTasksAdapter.getContext().getResources().getDrawable(R.drawable.sk_line_divider));
         mRcToDoTasks.addItemDecoration(dividerItemDecoration);
         mRcToDoTasks.setLayoutManager(mLayoutManager);
         mRcToDoTasks.setItemAnimator(new DefaultItemAnimator());

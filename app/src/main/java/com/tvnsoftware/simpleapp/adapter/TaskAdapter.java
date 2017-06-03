@@ -1,7 +1,7 @@
 package com.tvnsoftware.simpleapp.adapter;
-//import android.support.v7.widget.RecyclerView;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +13,7 @@ import com.tvnsoftware.simpleapp.R;
 import com.tvnsoftware.simpleapp.model.Task;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,6 +24,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     private List<Task> mTasks;
     private Context mContext;
     private TaskListener mListener;
+    private String[] priority = null;
+    private int mIHighColor;
+    private int mIMediumColor;
+    private int mISlowColor;
 
     public interface TaskListener {
         public void onClickTask(Task task);
@@ -38,6 +43,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(TaskAdapter.ViewHolder holder, int position) {
         final Task task = mTasks.get(position);
+        int iPriority = Arrays.asList(priority).indexOf(task.getPriority());
+        if (0 == iPriority) {
+            holder.mTvTaskPriority.setTextColor(mIHighColor);
+        } else if (1 == iPriority) {
+            holder.mTvTaskPriority.setTextColor(mIMediumColor);
+        } else {
+            holder.mTvTaskPriority.setTextColor(mISlowColor);
+        }
         holder.mTvTaskName.setText(task.getName());
         holder.mTvTaskPriority.setText(mTasks.get(position).getPriority());
         holder.mLayoutMain.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +86,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         this.mContext = context;
         this.mListener = listener;
         this.mTasks = new ArrayList<>();
+        priority = context.getResources().getStringArray(R.array.priority);
+        mIHighColor = ContextCompat.getColor(context, R.color.gender_press);
+        mIMediumColor = ContextCompat.getColor(context, R.color.main_blue);
+        mISlowColor = ContextCompat.getColor(context, R.color.colorPrimaryDark);
     }
 
     public void appendDatas(List<Task> tasks) {

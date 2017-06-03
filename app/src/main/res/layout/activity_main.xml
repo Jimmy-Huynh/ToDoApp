@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_bg"
     tools:context="com.tvnsoftware.simpleapp.activity.MainActivity">
 
     <android.support.v4.widget.NestedScrollView
@@ -17,10 +18,21 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
                 android:padding="16dp">
 
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@+id/ic_add"
+                    android:gravity="center"
+                    android:textSize="15pt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YOUR TO DO LIST"
+                    android:textColor="@color/main_bg" />
 
                 <RelativeLayout
+                    android:id="@+id/ic_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

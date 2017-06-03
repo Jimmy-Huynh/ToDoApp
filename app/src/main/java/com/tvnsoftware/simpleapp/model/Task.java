@@ -9,18 +9,22 @@ import java.io.Serializable;
  * Created by TamHH on 6/1/2017.
  */
 @DatabaseTable(tableName = "tasks")
-public class Task implements Serializable{
+public class Task implements Serializable {
     public static final String FIELD_NAME_ID = "id";
     public static final String FIELD_NAME_NAME = "name";
+    public static final String FIELD_NAME_DUE_DATE = "due_date";
     public static final String FIELD_NAME_NOTE = "note";
     public static final String FIELD_NAME_PRIORITY = "priority";
     public static final String FIELD_NAME_STATUS = "status";
 
-    @DatabaseField(columnName = "id", generatedId = true)
+    @DatabaseField(columnName = FIELD_NAME_ID, generatedId = true)
     private int id;
 
     @DatabaseField(columnName = FIELD_NAME_NAME)
     private String name;
+
+    @DatabaseField(columnName = FIELD_NAME_DUE_DATE)
+    private String dueDate;
 
     @DatabaseField(columnName = FIELD_NAME_NOTE)
     private String note;
@@ -48,6 +52,14 @@ public class Task implements Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
     }
 
     public String getNote() {

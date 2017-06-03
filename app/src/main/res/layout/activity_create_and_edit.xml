@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_bg"
     tools:context="com.tvnsoftware.simpleapp.activity.CreateAndEditActivity">
 
     <LinearLayout
@@ -16,7 +17,18 @@
             android:background="@color/colorPrimary"
             android:padding="16dp">
 
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/layout_save"
+                android:gravity="center"
+                android:textColor="@color/main_bg"
+                android:textSize="15pt" />
+
             <RelativeLayout
+                android:id="@+id/layout_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -27,7 +39,7 @@
                     android:id="@+id/btn_add_new"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:background="@drawable/ic_save_black_36dp" />
+                    android:background="@drawable/button_save" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -42,7 +54,7 @@
                     android:id="@+id/btn_close_new"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:background="@drawable/ic_close_black_36dp" />
+                    android:background="@drawable/button_close" />
             </RelativeLayout>
 
         </RelativeLayout>
@@ -51,11 +63,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -65,7 +83,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Task Name"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/edt_task_name"
@@ -78,6 +97,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -87,19 +111,26 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Due Date"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/edt_due_date"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
-                    android:inputType="date" />
+                    android:focusable="false" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -109,7 +140,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Task Notes"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/edt_task_note"
@@ -122,16 +154,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Priority Level"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/edt_task_priority"
@@ -143,6 +182,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -152,7 +196,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Status"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/edt_task_status"
@@ -163,6 +208,7 @@
 
         </LinearLayout>
 
-
     </LinearLayout>
+
+
 </RelativeLayout>

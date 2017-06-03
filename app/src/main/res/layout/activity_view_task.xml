@@ -3,20 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_bg"
     tools:context="com.tvnsoftware.simpleapp.activity.ViewTaskActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:background="@color/colorPrimary"
+            android:gravity="center"
             android:padding="16dp">
 
             <RelativeLayout
+                android:id="@+id/layout_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/button_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/layout_back">
+
+                <ImageView
+                    android:id="@+id/img_home_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_logo" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/layout_edit"
+                android:layout_toRightOf="@+id/layout_logo"
+                android:gravity="center">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View your task"
+                    android:textColor="@color/main_bg"
+                    android:textSize="12pt" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -27,7 +75,7 @@
                     android:id="@+id/btn_edit"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:background="@drawable/ic_mode_edit_black_36dp" />
+                    android:background="@drawable/button_edit" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -42,7 +90,7 @@
                     android:id="@+id/btn_delete"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:background="@drawable/ic_delete_black_36dp" />
+                    android:background="@drawable/button_delete" />
             </RelativeLayout>
 
         </RelativeLayout>
@@ -51,11 +99,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -65,7 +119,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Task Name"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_name"
@@ -81,6 +136,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -90,7 +150,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Due Date"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_due_date"
@@ -106,6 +167,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -115,7 +181,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Task Notes"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_note"
@@ -131,6 +198,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -140,7 +212,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Priority Level"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_priority"
@@ -156,6 +229,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/border_set"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
                 android:weightSum="8">
 
                 <TextView
@@ -165,7 +243,8 @@
                     android:gravity="center_vertical"
                     android:padding="6dp"
                     android:text="Status"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_status"
